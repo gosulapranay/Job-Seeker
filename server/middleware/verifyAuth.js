@@ -5,7 +5,7 @@ const verifyAuth = (req, res, next) => {
   try {
     const token = req.headers.authorization;
     if (!token) {
-      return res.status(401).send("Access Denied");
+      return res.status(401).json({ message: "Authorization denied" });
     }
     const decode = jwt.verify(token, process.env.JWT_SECRET_KEY);
     // decode the userid from token and add it to req object to use it in next function
