@@ -1,0 +1,97 @@
+.searchBox {
+    position: relative;
+    margin: 2rem 5rem;
+    padding: 2rem;
+    box-shadow: 0px 0px 22px 4px rgba(255, 32, 32, 0.25);
+}
+
+.searchBox .input {
+    all: unset;
+    width: 100%;
+    border: 1.8px solid #e3e3e3;
+    padding: 0.5rem 0.25rem;
+    font-size: 18px;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+}
+
+.searchBox .filter {
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+}
+
+.jobList .singleJob {
+    list-style: none;
+    display: flex;
+    margin: 2rem 5rem;
+    padding: 2rem;
+    box-shadow: 0px 0px 22px 4px rgba(255, 32, 32, 0.25);
+}
+
+.jobList .singleJob .left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+}
+
+.jobList .singleJob .left .img {
+    width: 50px;
+}
+
+.jobList .singleJob .left .locationType {
+    display: flex;
+    gap: 1rem;
+    color: #ed5353;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.jobList .singleJob .right {
+    width: 40%;
+    text-align: right;
+}
+
+.jobList .singleJob .right .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.jobList .singleJob .right .skills .skill {
+    text-transform: capitalize;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #fee;
+}
+
+button {
+    all: unset;
+    padding: 5px 10px;
+    background-color: #ed5353;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 5px;
+    border: 'none';
+    border-radius: 5px;
+}
+
+.inactive {
+    border: 1px solid #ed5353;
+    background-color: transparent;
+    color: #ed5353;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffe6a6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffd975;
+}
