@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getJobById } from "../services/jobs";
 import styles from "./JobDetails.module.css";
 import Navbar from "./Navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 export default function JobDetails() {
   const url = new URL(window.location.href);
   const id = url.pathname.split("/")[2];
@@ -22,6 +23,7 @@ export default function JobDetails() {
         setJobDetails(null);
       });
   }, [id]);
+  const navigate = useNavigate();
   console.log(jobDetails);
   return (
     <div className={styles.detailsPage}>
@@ -38,6 +40,9 @@ export default function JobDetails() {
           <div className={styles.details}>
             <p>{jobDetails.jobType}</p>
             <h1>{jobDetails.title}</h1>
+            <div>
+            <button className={styles.button}onClick={() => navigate(`/edit/${jobDetails._id}`)}>Edit Job</button> 
+            </div>
             <p style={{ color: "#ED5353" }}>{jobDetails.location}</p>
             <h3>About Company</h3>
             <p>{jobDetails.aboutCompany}</p>

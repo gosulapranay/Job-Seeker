@@ -43,3 +43,14 @@
     background-color: #fee;
     border-radius: 25px;
 }
+
+.button {
+    all: unset;
+    padding: 5px 10px;
+    background-color: #ed5353;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 5px;
+    border: 'none';
+    border-radius: 5px;
+}
